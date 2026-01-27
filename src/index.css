@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-pastel-200;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-cream via-light-pink to-soft-pink;
+    @apply min-h-screen;
+    @apply text-gray-800;
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-pastel-500 hover:bg-pastel-600 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-pastel-50 text-pastel-600 font-medium py-3 px-6 rounded-full border-2 border-pastel-300 transition-all duration-300 active:scale-95;
+  }
+  
+  .card {
+    @apply bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-6;
+  }
+  
+  .option-card {
+    @apply bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-pastel-400 active:scale-95;
+  }
+  
+  .option-card.selected {
+    @apply border-pastel-500 bg-pastel-50 shadow-xl;
+  }
+}
