@@ -7,7 +7,7 @@ export default function CharacterPreview() {
 
   const genderPrefix = gender === 'female' ? 'Nữ' : 'Nam';
   const genderPrefixLower = gender === 'female' ? 'nữ' : 'nam';
-  const basePath = `/assets/${gender}`;
+  const basePath = `${import.meta.env.BASE_URL}assets/${gender}`;
 
   return (
     <div className="relative w-full max-w-sm mx-auto aspect-[3/4] bg-white/50 rounded-3xl shadow-lg overflow-hidden">
