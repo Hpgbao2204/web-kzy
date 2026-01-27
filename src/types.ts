@@ -37,6 +37,7 @@ export interface GameState {
   setPants: (pants: PantsColor) => void;
   setShoes: (shoes: ShoesColor) => void;
   nextStep: () => void;
+  previousStep: () => void;
   calculateScore: () => void;
   reset: () => void;
 }

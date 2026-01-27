@@ -31,6 +31,19 @@ export default function CustomizationStep({ stepId }: CustomizationStepProps) {
       className="min-h-screen p-4 py-8"
     >
       <div className="max-w-6xl mx-auto space-y-6">
+        {/* Back button */}
+        <motion.button
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          onClick={gameState.previousStep}
+          className="flex items-center gap-2 text-pastel-600 hover:text-pastel-700 font-medium transition-colors"
+          whileHover={{ x: -4 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <span className="text-xl">←</span>
+          <span>Quay lại</span>
+        </motion.button>
+
         {/* Header */}
         <div className="card text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-pastel-600 mb-3">

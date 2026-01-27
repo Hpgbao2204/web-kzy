@@ -40,6 +40,15 @@ export const useGameStore = create<GameState>((set, get) => ({
     }
   },
 
+  previousStep: () => {
+    const current = get().currentStep;
+    const currentIndex = stepOrder.indexOf(current);
+    if (currentIndex > 0) {
+      const prevStep = stepOrder[currentIndex - 1];
+      set({ currentStep: prevStep });
+    }
+  },
+
   calculateScore: () => {
     const state = get();
     let matches = 0;
