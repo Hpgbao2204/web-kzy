@@ -33,18 +33,12 @@ export default function IntroScreen() {
           className="space-y-4 text-gray-700"
         >
           <p className="leading-relaxed">
-            Chào mừng bạn đến với trải nghiệm tương tác đặc biệt.
+            Bạn sắp tham gia buổi Fan Meeting quy mô nhất trong năm.
           </p>
           <p className="leading-relaxed">
-            Bạn sẽ tạo ra một idol theo phong cách của riêng mình.
-            Trong quá trình này, bạn sẽ nhận được nhiều thông tin về
-            <span className="font-semibold text-pastel-600"> xu hướng</span>,
-            <span className="font-semibold text-pastel-600"> dữ liệu</span>, và
-            <span className="font-semibold text-pastel-600"> kỳ vọng của đám đông</span>.
-          </p>
-          <p className="leading-relaxed">
-            Kết thúc trải nghiệm, bạn sẽ nhận được một phân tích thú vị
-            về cách bạn đưa ra quyết định.
+            Trước khi bước ra ánh đèn sân khấu, bạn đứng trước gương và chuẩn bị chọn trang phục. Mục tiêu duy nhất tối nay:
+            <span className="font-semibold text-pastel-600"> nhận được càng nhiều sự yêu thích càng tốt 
+                để củng cố vị thế của bạn trong lòng công chúng.</span>,
           </p>
           <div className="bg-pastel-50 rounded-xl p-4 border-l-4 border-pastel-400">
             <p className="text-sm text-gray-600">

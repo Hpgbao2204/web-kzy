@@ -69,7 +69,7 @@ export default function ResultScreen() {
             <h3 className="text-2xl font-bold text-pastel-700 mb-3">
               {interpretation.title}
             </h3>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed whitespace-pre-line">
               {interpretation.description}
             </p>
           </div>
@@ -104,15 +104,6 @@ export default function ResultScreen() {
             className="btn-primary flex-1"
           >
             Thử lại 🔄
-          </button>
-          <button
-            onClick={() => {
-              // Share functionality could be added here
-              alert('Cảm ơn bạn đã trải nghiệm! 💖');
-            }}
-            className="btn-secondary flex-1"
-          >
-            Chia sẻ cảm nhận ✨
           </button>
         </motion.div>
       </div>

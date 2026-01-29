@@ -23,6 +23,14 @@ export default function CustomizationStep({ stepId }: CustomizationStepProps) {
 
   const canProceed = currentValue !== null;
 
+  // Adjust hair color based on gender
+  const getChoiceColor = (choice: any) => {
+    if (stepId === 'hair' && choice.id === 'xanh') {
+      return gameState.gender === 'female' ? 'bg-green-400' : 'bg-blue-400';
+    }
+    return choice.color;
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, x: 20 }}
@@ -31,19 +39,6 @@ export default function CustomizationStep({ stepId }: CustomizationStepProps) {
       className="min-h-screen p-4 py-8"
     >
       <div className="max-w-6xl mx-auto space-y-6">
-        {/* Back button */}
-        <motion.button
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          onClick={gameState.previousStep}
-          className="flex items-center gap-2 text-pastel-600 hover:text-pastel-700 font-medium transition-colors"
-          whileHover={{ x: -4 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <span className="text-xl">←</span>
-          <span>Quay lại</span>
-        </motion.button>
-
         {/* Header */}
         <div className="card text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-pastel-600 mb-3">
@@ -76,7 +71,7 @@ export default function CustomizationStep({ stepId }: CustomizationStepProps) {
                   className={`option-card w-full p-4 flex items-center gap-4 ${currentValue === choice.id ? 'selected' : ''
                     }`}
                 >
-                  <div className={`w-12 h-12 rounded-full ${choice.color} border-2 border-gray-200`} />
+                  <div className={`w-12 h-12 rounded-full ${getChoiceColor(choice)} border-2 border-gray-200`} />
                   <div className="text-left flex-1">
                     <div className="font-semibold text-gray-800">{choice.label}</div>
                   </div>

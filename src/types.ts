@@ -17,7 +17,7 @@ export interface Choice {
 export interface Step {
   id: StepId;
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   choices: Choice[];
 }
 
